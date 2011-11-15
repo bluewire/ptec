@@ -1,13 +1,13 @@
 <?php
 /**
  * @file
- * contact_ptec.features.inc
+ * contact_page.features.inc
  */
 
 /**
  * Implements hook_ctools_plugin_api().
  */
-function contact_ptec_ctools_plugin_api() {
+function contact_page_ctools_plugin_api() {
   list($module, $api) = func_get_args();
   if ($module == "boxes" && $api == "box") {
     return array("version" => "1");
@@ -21,7 +21,7 @@ function contact_ptec_ctools_plugin_api() {
 /**
  * Implements hook_views_api().
  */
-function contact_ptec_views_api() {
+function contact_page_views_api() {
   list($module, $api) = func_get_args();
   if ($module == "views" && $api == "views_default") {
     return array("version" => "3.0");
@@ -31,7 +31,7 @@ function contact_ptec_views_api() {
 /**
  * Implements hook_node_info().
  */
-function contact_ptec_node_info() {
+function contact_page_node_info() {
   $items = array(
     'distributors' => array(
       'name' => t('Distributors'),

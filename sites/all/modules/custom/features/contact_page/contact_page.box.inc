@@ -1,13 +1,13 @@
 <?php
 /**
  * @file
- * contact_ptec.box.inc
+ * contact_page.box.inc
  */
 
 /**
  * Implements hook_default_box().
  */
-function contact_ptec_default_box() {
+function contact_page_default_box() {
   $export = array();
 
   $box = new stdClass;

@@ -1,13 +1,13 @@
 <?php
 /**
  * @file
- * contact_ptec.context.inc
+ * contact_page.context.inc
  */
 
 /**
  * Implements hook_context_default_contexts().
  */
-function contact_ptec_context_default_contexts() {
+function contact_page_context_default_contexts() {
   $export = array();
 
   $context = new stdClass;

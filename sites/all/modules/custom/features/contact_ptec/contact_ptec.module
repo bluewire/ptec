@@ -1,7 +1,0 @@
-<?php
-/**
- * @file
- * Code for the contact_ptec feature.
- */
-
-include_once('contact_ptec.features.inc');

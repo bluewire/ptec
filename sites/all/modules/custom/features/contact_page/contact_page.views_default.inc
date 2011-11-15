@@ -1,13 +1,13 @@
 <?php
 /**
  * @file
- * contact_ptec.views_default.inc
+ * contact_page.views_default.inc
  */
 
 /**
  * Implements hook_views_default_views().
  */
-function contact_ptec_views_default_views() {
+function contact_page_views_default_views() {
   $export = array();
 
   $view = new view;

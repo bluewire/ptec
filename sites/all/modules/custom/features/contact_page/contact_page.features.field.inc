@@ -1,13 +1,13 @@
 <?php
 /**
  * @file
- * contact_ptec.features.field.inc
+ * contact_page.features.field.inc
  */
 
 /**
  * Implements hook_field_default_fields().
  */
-function contact_ptec_field_default_fields() {
+function contact_page_field_default_fields() {
   $fields = array();
 
   // Exported field: 'node-distributors-field_dis_city'
