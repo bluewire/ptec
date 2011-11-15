@@ -1,13 +1,13 @@
 <?php
 /**
  * @file
- * about_us.features.field.inc
+ * about_page.features.field.inc
  */
 
 /**
  * Implements hook_field_default_fields().
  */
-function about_us_field_default_fields() {
+function about_page_field_default_fields() {
   $fields = array();
 
   // Exported field: 'node-employee-body'

@@ -1,13 +1,13 @@
 <?php
 /**
  * @file
- * about_us.context.inc
+ * about_page.context.inc
  */
 
 /**
  * Implements hook_context_default_contexts().
  */
-function about_us_context_default_contexts() {
+function about_page_context_default_contexts() {
   $export = array();
 
   $context = new stdClass;
