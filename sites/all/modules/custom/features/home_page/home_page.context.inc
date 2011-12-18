@@ -26,16 +26,10 @@ function home_page_context_default_contexts() {
   $context->reactions = array(
     'block' => array(
       'blocks' => array(
-        'user-login' => array(
-          'module' => 'user',
-          'delta' => 'login',
-          'region' => 'triptych_first',
-          'weight' => '-10',
-        ),
         'views-testimonials-block' => array(
           'module' => 'views',
           'delta' => 'testimonials-block',
-          'region' => 'triptych_middle',
+          'region' => 'footer_first',
           'weight' => '-10',
         ),
       ),
