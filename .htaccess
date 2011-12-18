@@ -95,6 +95,8 @@ DirectoryIndex index.php index.html index.htm
   #
   # If your site is running in a VirtualDocumentRoot at http://example.com/,
   # uncomment the following line:
+  # RewriteBase /
+  # for tom's computer
   RewriteBase /~tom/ptec
 
   # Pass all requests not referring directly to files in the filesystem to
