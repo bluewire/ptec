@@ -47,7 +47,7 @@ function home_page_field_default_fields() {
           'module' => 'text',
           'settings' => array(),
           'type' => 'text_default',
-          'weight' => '1',
+          'weight' => 0,
         ),
         'teaser' => array(
           'label' => 'above',
@@ -71,7 +71,7 @@ function home_page_field_default_fields() {
           'rows' => '5',
         ),
         'type' => 'text_textarea',
-        'weight' => '3',
+        'weight' => '31',
       ),
     ),
   );
@@ -108,7 +108,7 @@ function home_page_field_default_fields() {
     'field_instance' => array(
       'bundle' => 'featured_slide',
       'deleted' => '0',
-      'description' => 'the background image on the featured slide, full size image should be 936px wide and half size image should be 450px wide.  height should be at least 200px, recommended around 300px.',
+      'description' => 'the background image on the featured slide, image should be 950px wide by 400px tall',
       'display' => array(
         'default' => array(
           'label' => 'above',
@@ -118,7 +118,7 @@ function home_page_field_default_fields() {
             'image_style' => '',
           ),
           'type' => 'image',
-          'weight' => '2',
+          'weight' => 1,
         ),
         'teaser' => array(
           'label' => 'above',
@@ -130,14 +130,14 @@ function home_page_field_default_fields() {
       'entity_type' => 'node',
       'field_name' => 'field_featured_slide_image',
       'label' => 'Featured Slide Image',
-      'required' => 0,
+      'required' => 1,
       'settings' => array(
         'alt_field' => 1,
         'file_directory' => '',
         'file_extensions' => 'png gif jpg jpeg',
         'max_filesize' => '2 MB',
-        'max_resolution' => '936x450',
-        'min_resolution' => '450x200',
+        'max_resolution' => '950x400',
+        'min_resolution' => '950x400',
         'title_field' => 1,
         'user_register_form' => FALSE,
       ),
@@ -149,7 +149,7 @@ function home_page_field_default_fields() {
           'progress_indicator' => 'throbber',
         ),
         'type' => 'image_image',
-        'weight' => '4',
+        'weight' => '32',
       ),
     ),
   );
@@ -258,7 +258,7 @@ function home_page_field_default_fields() {
             'link' => FALSE,
           ),
           'type' => 'entityreference_label',
-          'weight' => '3',
+          'weight' => 2,
         ),
         'teaser' => array(
           'label' => 'above',
@@ -279,7 +279,7 @@ function home_page_field_default_fields() {
         'module' => 'options',
         'settings' => array(),
         'type' => 'options_select',
-        'weight' => '6',
+        'weight' => '33',
       ),
     ),
   );
@@ -429,7 +429,7 @@ function home_page_field_default_fields() {
   t('a quote from a satisfied customer');
   t('select how this slide should be displayed');
   t('short text description on the slide');
-  t('the background image on the featured slide, full size image should be 936px wide and half size image should be 450px wide.  height should be at least 200px, recommended around 300px.');
+  t('the background image on the featured slide, image should be 950px wide by 400px tall');
   t('the page that the featured slide should link to when clicked');
   t('the satisfied customer');
 
