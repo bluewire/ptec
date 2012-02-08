@@ -1,0 +1,7 @@
+<?php
+/**
+ * @file
+ * Code for the Distributors Page feature.
+ */
+
+include_once('distributors_page.features.inc');
