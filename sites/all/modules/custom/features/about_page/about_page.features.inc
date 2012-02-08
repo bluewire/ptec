@@ -37,14 +37,6 @@ function about_page_node_info() {
       'title_label' => t('Employee'),
       'help' => '',
     ),
-    'ptec' => array(
-      'name' => t('P-tec'),
-      'base' => 'node_content',
-      'description' => t('This is the main content type that holds the P-tec logo and mission statement.'),
-      'has_title' => '1',
-      'title_label' => t('P-tec'),
-      'help' => '',
-    ),
   );
   return $items;
 }

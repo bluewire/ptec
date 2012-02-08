@@ -13,9 +13,60 @@ function about_page_context_default_contexts() {
   $context = new stdClass;
   $context->disabled = FALSE; /* Edit this to true to make a default context disabled initially */
   $context->api_version = 3;
+  $context->name = 'about';
+  $context->description = 'Layout for the About page';
+  $context->tag = 'page';
+  $context->conditions = array(
+    'path' => array(
+      'values' => array(
+        'about' => 'about',
+      ),
+    ),
+  );
+  $context->reactions = array(
+    'block' => array(
+      'blocks' => array(
+        'system-main' => array(
+          'module' => 'system',
+          'delta' => 'main',
+          'region' => 'content',
+          'weight' => '-14',
+        ),
+        'views-employees-block' => array(
+          'module' => 'views',
+          'delta' => 'employees-block',
+          'region' => 'content',
+          'weight' => '-13',
+        ),
+        'views-mission-block' => array(
+          'module' => 'views',
+          'delta' => 'mission-block',
+          'region' => 'sidebar_first',
+          'weight' => '-10',
+        ),
+        'views-vision-block' => array(
+          'module' => 'views',
+          'delta' => 'vision-block',
+          'region' => 'sidebar_first',
+          'weight' => '-10',
+        ),
+      ),
+    ),
+  );
+  $context->condition_mode = 1;
+
+  // Translatables
+  // Included for use with string extractors like potx.
+  t('Layout for the About page');
+  t('page');
+  $export['about'] = $context;
+
+  $context = new stdClass;
+  $context->disabled = FALSE; /* Edit this to true to make a default context disabled initially */
+  $context->api_version = 3;
   $context->name = 'about_context';
   $context->description = 'Context for the About page';
-  $context->tag = '';
+  $context->tag = 'page';
   $context->conditions = array(
     'path' => array(
       'values' => array(
@@ -58,6 +109,7 @@ function about_page_context_default_contexts() {
   // Translatables
   // Included for use with string extractors like potx.
   t('Context for the About page');
+  t('page');
   $export['about_context'] = $context;
 
   return $export;

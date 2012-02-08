@@ -97,7 +97,9 @@ DirectoryIndex index.php index.html index.htm
   # uncomment the following line:
   # RewriteBase /
   # for tom's computer
-  RewriteBase /~tom/ptec
+  # RewriteBase /~tom/ptec
+  # For Drew's computer
+  RewriteBase /bluewire/ptec
 
   # Pass all requests not referring directly to files in the filesystem to
   # index.php. Clean URLs are handled in drupal_environment_initialize().

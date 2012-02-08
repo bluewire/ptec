@@ -12,7 +12,7 @@ function about_page_views_default_views() {
 
   $view = new view;
   $view->name = 'about';
-  $view->description = 'About P-tec';
+  $view->description = 'The main view for the P-tec About page';
   $view->tag = 'default';
   $view->base_table = 'node';
   $view->human_name = 'About';
@@ -32,7 +32,7 @@ function about_page_views_default_views() {
   $handler->display->display_options['pager']['options']['offset'] = '0';
   $handler->display->display_options['style_plugin'] = 'default';
   $handler->display->display_options['row_plugin'] = 'fields';
-  /* Field: Content: History */
+  /* Field: Content: P-tec History */
   $handler->display->display_options['fields']['field_history']['id'] = 'field_history';
   $handler->display->display_options['fields']['field_history']['table'] = 'field_data_field_history';
   $handler->display->display_options['fields']['field_history']['field'] = 'field_history';
@@ -75,7 +75,7 @@ function about_page_views_default_views() {
 
   $view = new view;
   $view->name = 'employees';
-  $view->description = '';
+  $view->description = 'Displays a list of employees that link to the content for that employee.';
   $view->tag = 'default';
   $view->base_table = 'node';
   $view->human_name = 'Employees';
@@ -91,17 +91,15 @@ function about_page_views_default_views() {
   $handler->display->display_options['query']['type'] = 'views_query';
   $handler->display->display_options['query']['options']['query_comment'] = FALSE;
   $handler->display->display_options['exposed_form']['type'] = 'basic';
-  $handler->display->display_options['pager']['type'] = 'full';
-  $handler->display->display_options['pager']['options']['items_per_page'] = '10';
+  $handler->display->display_options['pager']['type'] = 'none';
   $handler->display->display_options['pager']['options']['offset'] = '0';
-  $handler->display->display_options['pager']['options']['id'] = '0';
-  $handler->display->display_options['pager']['options']['expose']['items_per_page_options_all'] = 0;
   $handler->display->display_options['style_plugin'] = 'grid';
+  $handler->display->display_options['style_options']['columns'] = '3';
   $handler->display->display_options['style_options']['fill_single_line'] = 1;
   $handler->display->display_options['row_plugin'] = 'fields';
-  $handler->display->display_options['row_options']['hide_empty'] = 0;
+  $handler->display->display_options['row_options']['hide_empty'] = 1;
   $handler->display->display_options['row_options']['default_field_elements'] = 1;
-  /* Field: Content: Profile Picture */
+  /* Field: Content: Employee Profile Picture */
   $handler->display->display_options['fields']['field_profile_picture']['id'] = 'field_profile_picture';
   $handler->display->display_options['fields']['field_profile_picture']['table'] = 'field_data_field_profile_picture';
   $handler->display->display_options['fields']['field_profile_picture']['field'] = 'field_profile_picture';
@@ -125,11 +123,11 @@ function about_page_views_default_views() {
   $handler->display->display_options['fields']['field_profile_picture']['hide_alter_empty'] = 0;
   $handler->display->display_options['fields']['field_profile_picture']['click_sort_column'] = 'fid';
   $handler->display->display_options['fields']['field_profile_picture']['settings'] = array(
-    'image_style' => 'thumbnail',
-    'image_link' => '',
+    'image_style' => '',
+    'image_link' => 'content',
   );
   $handler->display->display_options['fields']['field_profile_picture']['field_api_classes'] = 0;
-  /* Field: Content: Name */
+  /* Field: Content: Employee Name */
   $handler->display->display_options['fields']['field_name']['id'] = 'field_name';
   $handler->display->display_options['fields']['field_name']['table'] = 'field_data_field_name';
   $handler->display->display_options['fields']['field_name']['field'] = 'field_name';
@@ -152,52 +150,6 @@ function about_page_views_default_views() {
   $handler->display->display_options['fields']['field_name']['empty_zero'] = 0;
   $handler->display->display_options['fields']['field_name']['hide_alter_empty'] = 1;
   $handler->display->display_options['fields']['field_name']['field_api_classes'] = 0;
-  /* Field: Content: Title */
-  $handler->display->display_options['fields']['field_title']['id'] = 'field_title';
-  $handler->display->display_options['fields']['field_title']['table'] = 'field_data_field_title';
-  $handler->display->display_options['fields']['field_title']['field'] = 'field_title';
-  $handler->display->display_options['fields']['field_title']['label'] = '';
-  $handler->display->display_options['fields']['field_title']['alter']['alter_text'] = 0;
-  $handler->display->display_options['fields']['field_title']['alter']['make_link'] = 0;
-  $handler->display->display_options['fields']['field_title']['alter']['absolute'] = 0;
-  $handler->display->display_options['fields']['field_title']['alter']['external'] = 0;
-  $handler->display->display_options['fields']['field_title']['alter']['replace_spaces'] = 0;
-  $handler->display->display_options['fields']['field_title']['alter']['trim_whitespace'] = 1;
-  $handler->display->display_options['fields']['field_title']['alter']['nl2br'] = 0;
-  $handler->display->display_options['fields']['field_title']['alter']['word_boundary'] = 1;
-  $handler->display->display_options['fields']['field_title']['alter']['ellipsis'] = 1;
-  $handler->display->display_options['fields']['field_title']['alter']['strip_tags'] = 0;
-  $handler->display->display_options['fields']['field_title']['alter']['trim'] = 0;
-  $handler->display->display_options['fields']['field_title']['alter']['html'] = 0;
-  $handler->display->display_options['fields']['field_title']['element_label_colon'] = FALSE;
-  $handler->display->display_options['fields']['field_title']['element_default_classes'] = 1;
-  $handler->display->display_options['fields']['field_title']['hide_empty'] = 1;
-  $handler->display->display_options['fields']['field_title']['empty_zero'] = 0;
-  $handler->display->display_options['fields']['field_title']['hide_alter_empty'] = 1;
-  $handler->display->display_options['fields']['field_title']['field_api_classes'] = 0;
-  /* Field: Content: Description */
-  $handler->display->display_options['fields']['field_description']['id'] = 'field_description';
-  $handler->display->display_options['fields']['field_description']['table'] = 'field_data_field_description';
-  $handler->display->display_options['fields']['field_description']['field'] = 'field_description';
-  $handler->display->display_options['fields']['field_description']['label'] = '';
-  $handler->display->display_options['fields']['field_description']['alter']['alter_text'] = 0;
-  $handler->display->display_options['fields']['field_description']['alter']['make_link'] = 0;
-  $handler->display->display_options['fields']['field_description']['alter']['absolute'] = 0;
-  $handler->display->display_options['fields']['field_description']['alter']['external'] = 0;
-  $handler->display->display_options['fields']['field_description']['alter']['replace_spaces'] = 0;
-  $handler->display->display_options['fields']['field_description']['alter']['trim_whitespace'] = 1;
-  $handler->display->display_options['fields']['field_description']['alter']['nl2br'] = 0;
-  $handler->display->display_options['fields']['field_description']['alter']['word_boundary'] = 1;
-  $handler->display->display_options['fields']['field_description']['alter']['ellipsis'] = 1;
-  $handler->display->display_options['fields']['field_description']['alter']['strip_tags'] = 0;
-  $handler->display->display_options['fields']['field_description']['alter']['trim'] = 0;
-  $handler->display->display_options['fields']['field_description']['alter']['html'] = 0;
-  $handler->display->display_options['fields']['field_description']['element_label_colon'] = FALSE;
-  $handler->display->display_options['fields']['field_description']['element_default_classes'] = 1;
-  $handler->display->display_options['fields']['field_description']['hide_empty'] = 1;
-  $handler->display->display_options['fields']['field_description']['empty_zero'] = 0;
-  $handler->display->display_options['fields']['field_description']['hide_alter_empty'] = 1;
-  $handler->display->display_options['fields']['field_description']['field_api_classes'] = 0;
   /* Sort criterion: Content: Post date */
   $handler->display->display_options['sorts']['created']['id'] = 'created';
   $handler->display->display_options['sorts']['created']['table'] = 'node';
@@ -210,6 +162,13 @@ function about_page_views_default_views() {
   $handler->display->display_options['filters']['status']['value'] = 1;
   $handler->display->display_options['filters']['status']['group'] = 0;
   $handler->display->display_options['filters']['status']['expose']['operator'] = FALSE;
+  /* Filter criterion: Content: Type */
+  $handler->display->display_options['filters']['type']['id'] = 'type';
+  $handler->display->display_options['filters']['type']['table'] = 'node';
+  $handler->display->display_options['filters']['type']['field'] = 'type';
+  $handler->display->display_options['filters']['type']['value'] = array(
+    'employee' => 'employee',
+  );
 
   /* Display: Block */
   $handler = $view->new_display('block', 'Block', 'block');
@@ -273,7 +232,7 @@ function about_page_views_default_views() {
 
   $view = new view;
   $view->name = 'mission';
-  $view->description = '';
+  $view->description = 'Displays the P-tec mission statement.';
   $view->tag = 'default';
   $view->base_table = 'node';
   $view->human_name = 'Mission';
@@ -293,7 +252,7 @@ function about_page_views_default_views() {
   $handler->display->display_options['pager']['options']['offset'] = '0';
   $handler->display->display_options['style_plugin'] = 'default';
   $handler->display->display_options['row_plugin'] = 'fields';
-  /* Field: Content: Mission Statement */
+  /* Field: Content: P-tec Mission Statement */
   $handler->display->display_options['fields']['field_mission_statment']['id'] = 'field_mission_statment';
   $handler->display->display_options['fields']['field_mission_statment']['table'] = 'field_data_field_mission_statment';
   $handler->display->display_options['fields']['field_mission_statment']['field'] = 'field_mission_statment';
@@ -335,7 +294,7 @@ function about_page_views_default_views() {
 
   $view = new view;
   $view->name = 'vision';
-  $view->description = '';
+  $view->description = 'Displays the P-tec vision statement.';
   $view->tag = 'default';
   $view->base_table = 'node';
   $view->human_name = 'Vision';
@@ -355,7 +314,7 @@ function about_page_views_default_views() {
   $handler->display->display_options['pager']['options']['offset'] = '0';
   $handler->display->display_options['style_plugin'] = 'default';
   $handler->display->display_options['row_plugin'] = 'fields';
-  /* Field: Content: Vision */
+  /* Field: Content: P-tec Vision Statement */
   $handler->display->display_options['fields']['field_vision']['id'] = 'field_vision';
   $handler->display->display_options['fields']['field_vision']['table'] = 'field_data_field_vision';
   $handler->display->display_options['fields']['field_vision']['field'] = 'field_vision';
