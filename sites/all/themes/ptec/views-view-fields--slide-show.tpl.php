@@ -45,7 +45,7 @@
 <?php if($fields['field_featured_slide_layout']->content == '2') { ?>
   <div class="slider-item">
     <div class="content">
-      <?php print $fields['field_featured_slide_description']->content; ?>
+      <?php print $fields['field_featured_slide_desc']->content; ?>
       <div class="more">
         <?php print $fields['field_featured_slide_link']->content; ?>
       </div>
@@ -59,7 +59,7 @@
       <div class="fr pl">
         <?php print $fields['field_featured_slide_image']->content; ?>
       </div>
-      <?php print $fields['field_featured_slide_description']->content; ?>
+      <?php print $fields['field_featured_slide_desc']->content; ?>
       <div class="more">
         <?php print $fields['field_featured_slide_link']->content; ?>
       </div>
@@ -72,7 +72,7 @@
       <div class="fl pr">
         <?php print $fields['field_featured_slide_image']->content; ?>
       </div>
-      <?php print $fields['field_featured_slide_description']->content; ?>
+      <?php print $fields['field_featured_slide_desc']->content; ?>
       <div class="more">
         <?php print $fields['field_featured_slide_link']->content; ?>
       </div>

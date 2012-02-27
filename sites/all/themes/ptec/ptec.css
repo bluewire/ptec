@@ -67,6 +67,75 @@
   visibility: hidden;
 }
 
+/* product pages */
+.view-product-categories table,
+.view-product-categories td,
+.view-employees table,
+.view-employees td,
+.view-distributor-list table,
+.view-distributor-list td {
+  border: none;
+}
+
+.view-product-categories .cols-2 td,
+.view-employees .cols-2 td {
+  padding-left: 0;
+  vertical-align: top;
+  width: 50%;
+}
+
+.view-distributor-list .cols-3 td {
+  padding-left: 0;
+  vertical-align: top;
+  width: 300px;
+}
+
+.view-distributor-list .cols-3 .col-1 {
+  padding-right: 15px;
+}
+
+.view-distributor-list .cols-3 .col-2 {
+  padding-left: 5px;
+  padding-right: 5px;
+}
+
+.view-distributor-list .cols-3 .col-3 {
+  padding-left: 15px;  
+}
+
+
+.view-product-categories .views-field-field-product-image {
+  float: left;
+  margin-bottom: 20px;
+  /* width: 210px; */
+  width: 234px;
+}
+
+.view-product-categories .views-field-field-product-image img,
+.view-employees .views-field-field-profile-picture img,
+.view-distributor-list .views-field-field-dis-logo img {
+  background: transparent url('../corporateclean/images/pattern.png');
+  border: 1px solid #d8d8d8;
+  padding: 10px;
+  margin: 0;
+}
+
+.view-product-categories .views-field-title {
+  font-size: 20px;
+  margin-bottom: 6px;
+}
+
+.view-employees .views-field-field-name,
+.view-distributor-list .views-field-field-dis-name {
+  font-size: 14px;
+  margin: 8px 0;
+}
+
+.views-field-field-testimonial-quote p {
+  display: inline;
+}
+
+
 /* utility classes */
 .fl { float: left; }
 .fr { float: right; }

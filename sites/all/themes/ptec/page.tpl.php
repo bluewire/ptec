@@ -61,7 +61,7 @@
     
         <div id="main">
             
-            <?php if (theme_get_setting('breadcrumb_display','corporateclean')): print $breadcrumb; endif; ?>
+            <!-- ?php if (theme_get_setting('breadcrumb_display','ptec')): print $breadcrumb; endif; ?> -->
             
             <?php if ($page['highlighted']): ?><div id="highlighted"><?php print render($page['highlighted']); ?></div><?php endif; ?>
        

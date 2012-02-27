@@ -1,7 +1,0 @@
-<?php
-/**
- * @file
- * Code for the products feature.
- */
-
-include_once('products.features.inc');
