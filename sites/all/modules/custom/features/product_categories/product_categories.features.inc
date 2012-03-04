@@ -22,7 +22,7 @@ function product_categories_node_info() {
     'product_category' => array(
       'name' => t('Product Category'),
       'base' => 'node_content',
-      'description' => t('a top level category of products that will link to shopatron'),
+      'description' => t('A top level category of products that will link to shopatron'),
       'has_title' => '1',
       'title_label' => t('Product Category'),
       'help' => '',

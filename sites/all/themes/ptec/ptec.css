@@ -135,6 +135,37 @@
   display: inline;
 }
 
+#block-views-distributor-list-block-1 .content {
+  padding-top: 0;
+}
+
+#block-views-distributor-list-block-1 h3 {
+  font-size: 20px;
+  font-weight: normal;
+}
+
+#block-views-distributor-list-block-1 .views-row {
+  margin-bottom: 24px;
+}
+
+#block-views-distributor-list-block-1 .view-distributor-list .views-field-field-dis-name {
+  margin: 0;
+}
+
+.front #block-views-testimonials-block {
+  float: left;
+  width: 330px;
+}
+.front #block-views-distributor-list-block-1 {
+  float: left;
+  margin-right: 20px;
+  width: 180px;
+}
+.front #block-views-about-us-block-1 {
+  float: left;
+  width: 400px;
+  margin-right: 20px;
+}
 
 /* utility classes */
 .fl { float: left; }

@@ -14,7 +14,7 @@ function about_page_context_default_contexts() {
   $context->disabled = FALSE; /* Edit this to true to make a default context disabled initially */
   $context->api_version = 3;
   $context->name = 'about';
-  $context->description = 'Layout for the About page';
+  $context->description = 'The about page with company info, mission, values and employee list';
   $context->tag = 'page';
   $context->conditions = array(
     'path' => array(
@@ -30,7 +30,7 @@ function about_page_context_default_contexts() {
           'module' => 'system',
           'delta' => 'main',
           'region' => 'content',
-          'weight' => '-14',
+          'weight' => '-13',
         ),
         'views-employees-block' => array(
           'module' => 'views',
@@ -38,15 +38,15 @@ function about_page_context_default_contexts() {
           'region' => 'content',
           'weight' => '-13',
         ),
-        'views-mission-block' => array(
+        'views-about_us-block_2' => array(
           'module' => 'views',
-          'delta' => 'mission-block',
+          'delta' => 'about_us-block_2',
           'region' => 'sidebar_first',
           'weight' => '-10',
         ),
-        'views-vision-block' => array(
+        'views-about_us-block_1' => array(
           'module' => 'views',
-          'delta' => 'vision-block',
+          'delta' => 'about_us-block_1',
           'region' => 'sidebar_first',
           'weight' => '-10',
         ),
@@ -57,60 +57,9 @@ function about_page_context_default_contexts() {
 
   // Translatables
   // Included for use with string extractors like potx.
-  t('Layout for the About page');
+  t('The about page with company info, mission, values and employee list');
   t('page');
   $export['about'] = $context;
-
-  $context = new stdClass;
-  $context->disabled = FALSE; /* Edit this to true to make a default context disabled initially */
-  $context->api_version = 3;
-  $context->name = 'about_context';
-  $context->description = 'Context for the About page';
-  $context->tag = 'page';
-  $context->conditions = array(
-    'path' => array(
-      'values' => array(
-        'about' => 'about',
-      ),
-    ),
-  );
-  $context->reactions = array(
-    'block' => array(
-      'blocks' => array(
-        'system-main' => array(
-          'module' => 'system',
-          'delta' => 'main',
-          'region' => 'content',
-          'weight' => '-11',
-        ),
-        'views-employees-block' => array(
-          'module' => 'views',
-          'delta' => 'employees-block',
-          'region' => 'content',
-          'weight' => '-10',
-        ),
-        'views-mission-block' => array(
-          'module' => 'views',
-          'delta' => 'mission-block',
-          'region' => 'sidebar_second',
-          'weight' => '-11',
-        ),
-        'views-vision-block' => array(
-          'module' => 'views',
-          'delta' => 'vision-block',
-          'region' => 'sidebar_second',
-          'weight' => '-10',
-        ),
-      ),
-    ),
-  );
-  $context->condition_mode = 1;
-
-  // Translatables
-  // Included for use with string extractors like potx.
-  t('Context for the About page');
-  t('page');
-  $export['about_context'] = $context;
 
   return $export;
 }

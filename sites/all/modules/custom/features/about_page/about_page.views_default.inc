@@ -11,11 +11,11 @@ function about_page_views_default_views() {
   $export = array();
 
   $view = new view;
-  $view->name = 'about';
-  $view->description = 'The main view for the P-tec About page';
+  $view->name = 'about_us';
+  $view->description = 'compiles all the content for the about page, then organized using context';
   $view->tag = 'default';
   $view->base_table = 'node';
-  $view->human_name = 'About';
+  $view->human_name = 'About Us';
   $view->core = 7;
   $view->api_version = '3.0-alpha1';
   $view->disabled = FALSE; /* Edit this to true to make a default view disabled initially */
@@ -32,34 +32,55 @@ function about_page_views_default_views() {
   $handler->display->display_options['pager']['options']['offset'] = '0';
   $handler->display->display_options['style_plugin'] = 'default';
   $handler->display->display_options['row_plugin'] = 'fields';
-  /* Field: Content: P-tec History */
-  $handler->display->display_options['fields']['field_history']['id'] = 'field_history';
-  $handler->display->display_options['fields']['field_history']['table'] = 'field_data_field_history';
-  $handler->display->display_options['fields']['field_history']['field'] = 'field_history';
-  $handler->display->display_options['fields']['field_history']['label'] = '';
-  $handler->display->display_options['fields']['field_history']['alter']['alter_text'] = 0;
-  $handler->display->display_options['fields']['field_history']['alter']['make_link'] = 0;
-  $handler->display->display_options['fields']['field_history']['alter']['absolute'] = 0;
-  $handler->display->display_options['fields']['field_history']['alter']['external'] = 0;
-  $handler->display->display_options['fields']['field_history']['alter']['replace_spaces'] = 0;
-  $handler->display->display_options['fields']['field_history']['alter']['trim_whitespace'] = 1;
-  $handler->display->display_options['fields']['field_history']['alter']['nl2br'] = 0;
-  $handler->display->display_options['fields']['field_history']['alter']['word_boundary'] = 1;
-  $handler->display->display_options['fields']['field_history']['alter']['ellipsis'] = 1;
-  $handler->display->display_options['fields']['field_history']['alter']['strip_tags'] = 0;
-  $handler->display->display_options['fields']['field_history']['alter']['trim'] = 0;
-  $handler->display->display_options['fields']['field_history']['alter']['html'] = 0;
-  $handler->display->display_options['fields']['field_history']['element_label_colon'] = FALSE;
-  $handler->display->display_options['fields']['field_history']['element_default_classes'] = 1;
-  $handler->display->display_options['fields']['field_history']['hide_empty'] = 1;
-  $handler->display->display_options['fields']['field_history']['empty_zero'] = 0;
-  $handler->display->display_options['fields']['field_history']['hide_alter_empty'] = 1;
-  $handler->display->display_options['fields']['field_history']['field_api_classes'] = 0;
-  /* Sort criterion: Content: Post date */
-  $handler->display->display_options['sorts']['created']['id'] = 'created';
-  $handler->display->display_options['sorts']['created']['table'] = 'node';
-  $handler->display->display_options['sorts']['created']['field'] = 'created';
-  $handler->display->display_options['sorts']['created']['order'] = 'DESC';
+  $handler->display->display_options['row_options']['hide_empty'] = 0;
+  $handler->display->display_options['row_options']['default_field_elements'] = 1;
+  /* Field: Content: Title */
+  $handler->display->display_options['fields']['title']['id'] = 'title';
+  $handler->display->display_options['fields']['title']['table'] = 'node';
+  $handler->display->display_options['fields']['title']['field'] = 'title';
+  $handler->display->display_options['fields']['title']['label'] = '';
+  $handler->display->display_options['fields']['title']['alter']['alter_text'] = 0;
+  $handler->display->display_options['fields']['title']['alter']['make_link'] = 0;
+  $handler->display->display_options['fields']['title']['alter']['absolute'] = 0;
+  $handler->display->display_options['fields']['title']['alter']['external'] = 0;
+  $handler->display->display_options['fields']['title']['alter']['replace_spaces'] = 0;
+  $handler->display->display_options['fields']['title']['alter']['trim_whitespace'] = 0;
+  $handler->display->display_options['fields']['title']['alter']['nl2br'] = 0;
+  $handler->display->display_options['fields']['title']['alter']['word_boundary'] = 0;
+  $handler->display->display_options['fields']['title']['alter']['ellipsis'] = 0;
+  $handler->display->display_options['fields']['title']['alter']['strip_tags'] = 0;
+  $handler->display->display_options['fields']['title']['alter']['trim'] = 0;
+  $handler->display->display_options['fields']['title']['alter']['html'] = 0;
+  $handler->display->display_options['fields']['title']['element_type'] = 'h2';
+  $handler->display->display_options['fields']['title']['element_label_colon'] = FALSE;
+  $handler->display->display_options['fields']['title']['element_default_classes'] = 1;
+  $handler->display->display_options['fields']['title']['hide_empty'] = 0;
+  $handler->display->display_options['fields']['title']['empty_zero'] = 0;
+  $handler->display->display_options['fields']['title']['hide_alter_empty'] = 0;
+  $handler->display->display_options['fields']['title']['link_to_node'] = 1;
+  /* Field: Content: Body */
+  $handler->display->display_options['fields']['body']['id'] = 'body';
+  $handler->display->display_options['fields']['body']['table'] = 'field_data_body';
+  $handler->display->display_options['fields']['body']['field'] = 'body';
+  $handler->display->display_options['fields']['body']['label'] = '';
+  $handler->display->display_options['fields']['body']['alter']['alter_text'] = 0;
+  $handler->display->display_options['fields']['body']['alter']['make_link'] = 0;
+  $handler->display->display_options['fields']['body']['alter']['absolute'] = 0;
+  $handler->display->display_options['fields']['body']['alter']['external'] = 0;
+  $handler->display->display_options['fields']['body']['alter']['replace_spaces'] = 0;
+  $handler->display->display_options['fields']['body']['alter']['trim_whitespace'] = 0;
+  $handler->display->display_options['fields']['body']['alter']['nl2br'] = 0;
+  $handler->display->display_options['fields']['body']['alter']['word_boundary'] = 1;
+  $handler->display->display_options['fields']['body']['alter']['ellipsis'] = 1;
+  $handler->display->display_options['fields']['body']['alter']['strip_tags'] = 0;
+  $handler->display->display_options['fields']['body']['alter']['trim'] = 0;
+  $handler->display->display_options['fields']['body']['alter']['html'] = 0;
+  $handler->display->display_options['fields']['body']['element_label_colon'] = FALSE;
+  $handler->display->display_options['fields']['body']['element_default_classes'] = 1;
+  $handler->display->display_options['fields']['body']['hide_empty'] = 0;
+  $handler->display->display_options['fields']['body']['empty_zero'] = 0;
+  $handler->display->display_options['fields']['body']['hide_alter_empty'] = 0;
+  $handler->display->display_options['fields']['body']['field_api_classes'] = 0;
   /* Filter criterion: Content: Published */
   $handler->display->display_options['filters']['status']['id'] = 'status';
   $handler->display->display_options['filters']['status']['table'] = 'node';
@@ -67,11 +88,50 @@ function about_page_views_default_views() {
   $handler->display->display_options['filters']['status']['value'] = 1;
   $handler->display->display_options['filters']['status']['group'] = 0;
   $handler->display->display_options['filters']['status']['expose']['operator'] = FALSE;
+  /* Filter criterion: Content: Title */
+  $handler->display->display_options['filters']['title']['id'] = 'title';
+  $handler->display->display_options['filters']['title']['table'] = 'node';
+  $handler->display->display_options['filters']['title']['field'] = 'title';
+  $handler->display->display_options['filters']['title']['value'] = 'Our Company';
 
-  /* Display: Page */
-  $handler = $view->new_display('page', 'Page', 'page');
+  /* Display: About Us */
+  $handler = $view->new_display('page', 'About Us', 'page');
   $handler->display->display_options['path'] = 'about';
-  $export['about'] = $view;
+
+  /* Display: Our Mission */
+  $handler = $view->new_display('block', 'Our Mission', 'block_1');
+  $handler->display->display_options['defaults']['title'] = FALSE;
+  $handler->display->display_options['defaults']['filters'] = FALSE;
+  /* Filter criterion: Content: Published */
+  $handler->display->display_options['filters']['status']['id'] = 'status';
+  $handler->display->display_options['filters']['status']['table'] = 'node';
+  $handler->display->display_options['filters']['status']['field'] = 'status';
+  $handler->display->display_options['filters']['status']['value'] = 1;
+  $handler->display->display_options['filters']['status']['group'] = 0;
+  $handler->display->display_options['filters']['status']['expose']['operator'] = FALSE;
+  /* Filter criterion: Content: Title */
+  $handler->display->display_options['filters']['title']['id'] = 'title';
+  $handler->display->display_options['filters']['title']['table'] = 'node';
+  $handler->display->display_options['filters']['title']['field'] = 'title';
+  $handler->display->display_options['filters']['title']['value'] = 'Our Mission';
+
+  /* Display: Our Vision */
+  $handler = $view->new_display('block', 'Our Vision', 'block_2');
+  $handler->display->display_options['defaults']['title'] = FALSE;
+  $handler->display->display_options['defaults']['filters'] = FALSE;
+  /* Filter criterion: Content: Published */
+  $handler->display->display_options['filters']['status']['id'] = 'status';
+  $handler->display->display_options['filters']['status']['table'] = 'node';
+  $handler->display->display_options['filters']['status']['field'] = 'status';
+  $handler->display->display_options['filters']['status']['value'] = 1;
+  $handler->display->display_options['filters']['status']['group'] = 0;
+  $handler->display->display_options['filters']['status']['expose']['operator'] = FALSE;
+  /* Filter criterion: Content: Title */
+  $handler->display->display_options['filters']['title']['id'] = 'title';
+  $handler->display->display_options['filters']['title']['table'] = 'node';
+  $handler->display->display_options['filters']['title']['field'] = 'title';
+  $handler->display->display_options['filters']['title']['value'] = 'Our Vision';
+  $export['about_us'] = $view;
 
   $view = new view;
   $view->name = 'employees';
@@ -172,186 +232,6 @@ function about_page_views_default_views() {
   /* Display: Block */
   $handler = $view->new_display('block', 'Block', 'block');
   $export['employees'] = $view;
-
-  $view = new view;
-  $view->name = 'history';
-  $view->description = '';
-  $view->tag = 'default';
-  $view->base_table = 'node';
-  $view->human_name = 'History';
-  $view->core = 7;
-  $view->api_version = '3.0-alpha1';
-  $view->disabled = FALSE; /* Edit this to true to make a default view disabled initially */
-
-  /* Display: Master */
-  $handler = $view->new_display('default', 'Master', 'default');
-  $handler->display->display_options['title'] = 'History';
-  $handler->display->display_options['access']['type'] = 'perm';
-  $handler->display->display_options['cache']['type'] = 'none';
-  $handler->display->display_options['query']['type'] = 'views_query';
-  $handler->display->display_options['query']['options']['query_comment'] = FALSE;
-  $handler->display->display_options['exposed_form']['type'] = 'basic';
-  $handler->display->display_options['pager']['type'] = 'full';
-  $handler->display->display_options['pager']['options']['items_per_page'] = '1';
-  $handler->display->display_options['style_plugin'] = 'default';
-  $handler->display->display_options['row_plugin'] = 'fields';
-  /* Field: Content: Title */
-  $handler->display->display_options['fields']['title']['id'] = 'title';
-  $handler->display->display_options['fields']['title']['table'] = 'node';
-  $handler->display->display_options['fields']['title']['field'] = 'title';
-  $handler->display->display_options['fields']['title']['label'] = '';
-  $handler->display->display_options['fields']['title']['alter']['alter_text'] = 0;
-  $handler->display->display_options['fields']['title']['alter']['make_link'] = 0;
-  $handler->display->display_options['fields']['title']['alter']['absolute'] = 0;
-  $handler->display->display_options['fields']['title']['alter']['word_boundary'] = 0;
-  $handler->display->display_options['fields']['title']['alter']['ellipsis'] = 0;
-  $handler->display->display_options['fields']['title']['alter']['strip_tags'] = 0;
-  $handler->display->display_options['fields']['title']['alter']['trim'] = 0;
-  $handler->display->display_options['fields']['title']['alter']['html'] = 0;
-  $handler->display->display_options['fields']['title']['hide_empty'] = 0;
-  $handler->display->display_options['fields']['title']['empty_zero'] = 0;
-  $handler->display->display_options['fields']['title']['link_to_node'] = 1;
-  /* Sort criterion: Content: Post date */
-  $handler->display->display_options['sorts']['created']['id'] = 'created';
-  $handler->display->display_options['sorts']['created']['table'] = 'node';
-  $handler->display->display_options['sorts']['created']['field'] = 'created';
-  $handler->display->display_options['sorts']['created']['order'] = 'DESC';
-  /* Filter criterion: Content: Published */
-  $handler->display->display_options['filters']['status']['id'] = 'status';
-  $handler->display->display_options['filters']['status']['table'] = 'node';
-  $handler->display->display_options['filters']['status']['field'] = 'status';
-  $handler->display->display_options['filters']['status']['value'] = 1;
-  $handler->display->display_options['filters']['status']['group'] = 0;
-  $handler->display->display_options['filters']['status']['expose']['operator'] = FALSE;
-
-  /* Display: Page */
-  $handler = $view->new_display('page', 'Page', 'page');
-  $handler->display->display_options['path'] = 'history';
-  $export['history'] = $view;
-
-  $view = new view;
-  $view->name = 'mission';
-  $view->description = 'Displays the P-tec mission statement.';
-  $view->tag = 'default';
-  $view->base_table = 'node';
-  $view->human_name = 'Mission';
-  $view->core = 7;
-  $view->api_version = '3.0-alpha1';
-  $view->disabled = FALSE; /* Edit this to true to make a default view disabled initially */
-
-  /* Display: Master */
-  $handler = $view->new_display('default', 'Master', 'default');
-  $handler->display->display_options['title'] = 'Our Mission';
-  $handler->display->display_options['access']['type'] = 'perm';
-  $handler->display->display_options['cache']['type'] = 'none';
-  $handler->display->display_options['query']['type'] = 'views_query';
-  $handler->display->display_options['query']['options']['query_comment'] = FALSE;
-  $handler->display->display_options['exposed_form']['type'] = 'basic';
-  $handler->display->display_options['pager']['type'] = 'none';
-  $handler->display->display_options['pager']['options']['offset'] = '0';
-  $handler->display->display_options['style_plugin'] = 'default';
-  $handler->display->display_options['row_plugin'] = 'fields';
-  /* Field: Content: P-tec Mission Statement */
-  $handler->display->display_options['fields']['field_mission_statment']['id'] = 'field_mission_statment';
-  $handler->display->display_options['fields']['field_mission_statment']['table'] = 'field_data_field_mission_statment';
-  $handler->display->display_options['fields']['field_mission_statment']['field'] = 'field_mission_statment';
-  $handler->display->display_options['fields']['field_mission_statment']['label'] = '';
-  $handler->display->display_options['fields']['field_mission_statment']['alter']['alter_text'] = 0;
-  $handler->display->display_options['fields']['field_mission_statment']['alter']['make_link'] = 0;
-  $handler->display->display_options['fields']['field_mission_statment']['alter']['absolute'] = 0;
-  $handler->display->display_options['fields']['field_mission_statment']['alter']['external'] = 0;
-  $handler->display->display_options['fields']['field_mission_statment']['alter']['replace_spaces'] = 0;
-  $handler->display->display_options['fields']['field_mission_statment']['alter']['trim_whitespace'] = 1;
-  $handler->display->display_options['fields']['field_mission_statment']['alter']['nl2br'] = 0;
-  $handler->display->display_options['fields']['field_mission_statment']['alter']['word_boundary'] = 1;
-  $handler->display->display_options['fields']['field_mission_statment']['alter']['ellipsis'] = 1;
-  $handler->display->display_options['fields']['field_mission_statment']['alter']['strip_tags'] = 0;
-  $handler->display->display_options['fields']['field_mission_statment']['alter']['trim'] = 0;
-  $handler->display->display_options['fields']['field_mission_statment']['alter']['html'] = 0;
-  $handler->display->display_options['fields']['field_mission_statment']['element_label_colon'] = FALSE;
-  $handler->display->display_options['fields']['field_mission_statment']['element_default_classes'] = 1;
-  $handler->display->display_options['fields']['field_mission_statment']['hide_empty'] = 1;
-  $handler->display->display_options['fields']['field_mission_statment']['empty_zero'] = 0;
-  $handler->display->display_options['fields']['field_mission_statment']['hide_alter_empty'] = 1;
-  $handler->display->display_options['fields']['field_mission_statment']['field_api_classes'] = 0;
-  /* Sort criterion: Content: Post date */
-  $handler->display->display_options['sorts']['created']['id'] = 'created';
-  $handler->display->display_options['sorts']['created']['table'] = 'node';
-  $handler->display->display_options['sorts']['created']['field'] = 'created';
-  $handler->display->display_options['sorts']['created']['order'] = 'DESC';
-  /* Filter criterion: Content: Published */
-  $handler->display->display_options['filters']['status']['id'] = 'status';
-  $handler->display->display_options['filters']['status']['table'] = 'node';
-  $handler->display->display_options['filters']['status']['field'] = 'status';
-  $handler->display->display_options['filters']['status']['value'] = 1;
-  $handler->display->display_options['filters']['status']['group'] = 0;
-  $handler->display->display_options['filters']['status']['expose']['operator'] = FALSE;
-
-  /* Display: Block */
-  $handler = $view->new_display('block', 'Block', 'block');
-  $export['mission'] = $view;
-
-  $view = new view;
-  $view->name = 'vision';
-  $view->description = 'Displays the P-tec vision statement.';
-  $view->tag = 'default';
-  $view->base_table = 'node';
-  $view->human_name = 'Vision';
-  $view->core = 7;
-  $view->api_version = '3.0-alpha1';
-  $view->disabled = FALSE; /* Edit this to true to make a default view disabled initially */
-
-  /* Display: Master */
-  $handler = $view->new_display('default', 'Master', 'default');
-  $handler->display->display_options['title'] = 'Our Vision';
-  $handler->display->display_options['access']['type'] = 'perm';
-  $handler->display->display_options['cache']['type'] = 'none';
-  $handler->display->display_options['query']['type'] = 'views_query';
-  $handler->display->display_options['query']['options']['query_comment'] = FALSE;
-  $handler->display->display_options['exposed_form']['type'] = 'basic';
-  $handler->display->display_options['pager']['type'] = 'none';
-  $handler->display->display_options['pager']['options']['offset'] = '0';
-  $handler->display->display_options['style_plugin'] = 'default';
-  $handler->display->display_options['row_plugin'] = 'fields';
-  /* Field: Content: P-tec Vision Statement */
-  $handler->display->display_options['fields']['field_vision']['id'] = 'field_vision';
-  $handler->display->display_options['fields']['field_vision']['table'] = 'field_data_field_vision';
-  $handler->display->display_options['fields']['field_vision']['field'] = 'field_vision';
-  $handler->display->display_options['fields']['field_vision']['label'] = '';
-  $handler->display->display_options['fields']['field_vision']['alter']['alter_text'] = 0;
-  $handler->display->display_options['fields']['field_vision']['alter']['make_link'] = 0;
-  $handler->display->display_options['fields']['field_vision']['alter']['absolute'] = 0;
-  $handler->display->display_options['fields']['field_vision']['alter']['external'] = 0;
-  $handler->display->display_options['fields']['field_vision']['alter']['replace_spaces'] = 0;
-  $handler->display->display_options['fields']['field_vision']['alter']['trim_whitespace'] = 1;
-  $handler->display->display_options['fields']['field_vision']['alter']['nl2br'] = 0;
-  $handler->display->display_options['fields']['field_vision']['alter']['word_boundary'] = 1;
-  $handler->display->display_options['fields']['field_vision']['alter']['ellipsis'] = 1;
-  $handler->display->display_options['fields']['field_vision']['alter']['strip_tags'] = 0;
-  $handler->display->display_options['fields']['field_vision']['alter']['trim'] = 0;
-  $handler->display->display_options['fields']['field_vision']['alter']['html'] = 0;
-  $handler->display->display_options['fields']['field_vision']['element_label_colon'] = FALSE;
-  $handler->display->display_options['fields']['field_vision']['element_default_classes'] = 1;
-  $handler->display->display_options['fields']['field_vision']['hide_empty'] = 1;
-  $handler->display->display_options['fields']['field_vision']['empty_zero'] = 0;
-  $handler->display->display_options['fields']['field_vision']['hide_alter_empty'] = 1;
-  $handler->display->display_options['fields']['field_vision']['field_api_classes'] = 0;
-  /* Sort criterion: Content: Post date */
-  $handler->display->display_options['sorts']['created']['id'] = 'created';
-  $handler->display->display_options['sorts']['created']['table'] = 'node';
-  $handler->display->display_options['sorts']['created']['field'] = 'created';
-  $handler->display->display_options['sorts']['created']['order'] = 'DESC';
-  /* Filter criterion: Content: Published */
-  $handler->display->display_options['filters']['status']['id'] = 'status';
-  $handler->display->display_options['filters']['status']['table'] = 'node';
-  $handler->display->display_options['filters']['status']['field'] = 'status';
-  $handler->display->display_options['filters']['status']['value'] = 1;
-  $handler->display->display_options['filters']['status']['group'] = 0;
-  $handler->display->display_options['filters']['status']['expose']['operator'] = FALSE;
-
-  /* Display: Block */
-  $handler = $view->new_display('block', 'Block', 'block');
-  $export['vision'] = $view;
 
   return $export;
 }

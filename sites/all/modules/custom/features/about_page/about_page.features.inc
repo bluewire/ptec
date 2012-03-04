@@ -32,7 +32,7 @@ function about_page_node_info() {
     'employee' => array(
       'name' => t('Employee'),
       'base' => 'node_content',
-      'description' => t('The Employee content type is used to display employee information such as an image and a brief description.'),
+      'description' => t('Display employee information such as an image and a brief description'),
       'has_title' => '1',
       'title_label' => t('Employee'),
       'help' => '',

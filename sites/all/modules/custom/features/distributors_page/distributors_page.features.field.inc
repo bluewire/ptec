@@ -42,7 +42,7 @@ function distributors_page_field_default_fields() {
       'bundle' => 'distributors',
       'default_value' => NULL,
       'deleted' => '0',
-      'description' => 'City of the distributor\'s address',
+      'description' => '',
       'display' => array(
         'default' => array(
           'label' => 'hidden',
@@ -61,7 +61,7 @@ function distributors_page_field_default_fields() {
       'entity_type' => 'node',
       'field_name' => 'field_dis_city',
       'label' => 'Distributor City',
-      'required' => 1,
+      'required' => 0,
       'settings' => array(
         'text_processing' => '0',
         'user_register_form' => FALSE,
@@ -110,7 +110,7 @@ function distributors_page_field_default_fields() {
     'field_instance' => array(
       'bundle' => 'distributors',
       'deleted' => '0',
-      'description' => 'Logo for distributor',
+      'description' => 'Logo for the distributor, will be resized to 200px by 200px',
       'display' => array(
         'default' => array(
           'label' => 'hidden',
@@ -132,15 +132,15 @@ function distributors_page_field_default_fields() {
       'entity_type' => 'node',
       'field_name' => 'field_dis_logo',
       'label' => 'Distributor Logo',
-      'required' => 1,
+      'required' => 0,
       'settings' => array(
         'alt_field' => 1,
         'file_directory' => '',
         'file_extensions' => 'png gif jpg jpeg',
         'max_filesize' => '512',
-        'max_resolution' => '200x200',
-        'min_resolution' => '100x100',
-        'title_field' => 0,
+        'max_resolution' => '',
+        'min_resolution' => '200x200',
+        'title_field' => 1,
         'user_register_form' => FALSE,
       ),
       'widget' => array(
@@ -151,7 +151,7 @@ function distributors_page_field_default_fields() {
           'progress_indicator' => 'throbber',
         ),
         'type' => 'image_image',
-        'weight' => '3',
+        'weight' => '2',
       ),
     ),
   );
@@ -188,7 +188,7 @@ function distributors_page_field_default_fields() {
       'bundle' => 'distributors',
       'default_value' => NULL,
       'deleted' => '0',
-      'description' => 'The name of the distributor',
+      'description' => 'Name of the distributor',
       'display' => array(
         'default' => array(
           'label' => 'hidden',
@@ -219,7 +219,7 @@ function distributors_page_field_default_fields() {
           'size' => '50',
         ),
         'type' => 'text_textfield',
-        'weight' => '2',
+        'weight' => '1',
       ),
     ),
   );
@@ -275,7 +275,7 @@ function distributors_page_field_default_fields() {
       'entity_type' => 'node',
       'field_name' => 'field_dis_slogan',
       'label' => 'Distributor Slogan',
-      'required' => 1,
+      'required' => 0,
       'settings' => array(
         'text_processing' => '0',
         'user_register_form' => FALSE,
@@ -287,7 +287,7 @@ function distributors_page_field_default_fields() {
           'size' => '60',
         ),
         'type' => 'text_textfield',
-        'weight' => '4',
+        'weight' => '11',
       ),
     ),
   );
@@ -324,7 +324,7 @@ function distributors_page_field_default_fields() {
       'bundle' => 'distributors',
       'default_value' => NULL,
       'deleted' => '0',
-      'description' => 'The state of the distributors address',
+      'description' => '',
       'display' => array(
         'default' => array(
           'label' => 'hidden',
@@ -343,7 +343,7 @@ function distributors_page_field_default_fields() {
       'entity_type' => 'node',
       'field_name' => 'field_dis_state',
       'label' => 'Distributor State',
-      'required' => 1,
+      'required' => 0,
       'settings' => array(
         'text_processing' => '0',
         'user_register_form' => FALSE,
@@ -411,7 +411,7 @@ function distributors_page_field_default_fields() {
       'entity_type' => 'node',
       'field_name' => 'field_dis_street1',
       'label' => 'Distributor Street1',
-      'required' => 1,
+      'required' => 0,
       'settings' => array(
         'text_processing' => '0',
         'user_register_form' => FALSE,
@@ -515,7 +515,7 @@ function distributors_page_field_default_fields() {
       'bundle' => 'distributors',
       'default_value' => NULL,
       'deleted' => '0',
-      'description' => 'Zip code of the distributor address',
+      'description' => '',
       'display' => array(
         'default' => array(
           'label' => 'hidden',
@@ -539,7 +539,7 @@ function distributors_page_field_default_fields() {
       'entity_type' => 'node',
       'field_name' => 'field_dis_zip',
       'label' => 'Distributor Zip Code',
-      'required' => 1,
+      'required' => 0,
       'settings' => array(
         'max' => '',
         'min' => '',
@@ -576,7 +576,7 @@ function distributors_page_field_default_fields() {
       'bundle' => 'distributors',
       'default_value' => NULL,
       'deleted' => '0',
-      'description' => 'Contact email address for the distributor.',
+      'description' => 'Contact email address for the distributor',
       'display' => array(
         'default' => array(
           'label' => 'hidden',
@@ -595,7 +595,7 @@ function distributors_page_field_default_fields() {
       'entity_type' => 'node',
       'field_name' => 'field_distributor_email',
       'label' => 'Distributor Email',
-      'required' => 1,
+      'required' => 0,
       'settings' => array(
         'user_register_form' => FALSE,
       ),
@@ -606,7 +606,7 @@ function distributors_page_field_default_fields() {
           'size' => '60',
         ),
         'type' => 'email_textfield',
-        'weight' => '12',
+        'weight' => '4',
       ),
     ),
   );
@@ -641,7 +641,7 @@ function distributors_page_field_default_fields() {
       'bundle' => 'distributors',
       'default_value' => NULL,
       'deleted' => '0',
-      'description' => 'A short summary about the distributor',
+      'description' => 'A short summary about the distributor\'s business and offerings',
       'display' => array(
         'default' => array(
           'label' => 'hidden',
@@ -662,7 +662,7 @@ function distributors_page_field_default_fields() {
       'entity_type' => 'node',
       'field_name' => 'field_distributor_overview',
       'label' => 'Distributor Overview',
-      'required' => 1,
+      'required' => 0,
       'settings' => array(
         'display_summary' => 0,
         'text_processing' => '1',
@@ -676,7 +676,7 @@ function distributors_page_field_default_fields() {
           'summary_rows' => 5,
         ),
         'type' => 'text_textarea_with_summary',
-        'weight' => '5',
+        'weight' => '12',
       ),
     ),
   );
@@ -721,7 +721,7 @@ function distributors_page_field_default_fields() {
       'entity_type' => 'node',
       'field_name' => 'field_distributor_phone',
       'label' => 'Distributor Phone',
-      'required' => 1,
+      'required' => 0,
       'settings' => array(
         'ca_phone_parentheses' => 0,
         'ca_phone_separator' => '.',
@@ -735,16 +735,98 @@ function distributors_page_field_default_fields() {
         'module' => 'phone',
         'settings' => array(),
         'type' => 'phone_textfield',
-        'weight' => '11',
+        'weight' => '3',
+      ),
+    ),
+  );
+
+  // Exported field: 'node-distributors-field_distributor_website'
+  $fields['node-distributors-field_distributor_website'] = array(
+    'field_config' => array(
+      'active' => '1',
+      'cardinality' => '1',
+      'deleted' => '0',
+      'entity_types' => array(),
+      'field_name' => 'field_distributor_website',
+      'foreign keys' => array(),
+      'indexes' => array(),
+      'module' => 'link',
+      'settings' => array(
+        'attributes' => array(
+          'class' => '',
+          'rel' => '',
+          'target' => 'default',
+        ),
+        'display' => array(
+          'url_cutoff' => 80,
+        ),
+        'enable_tokens' => 1,
+        'title' => 'optional',
+        'title_maxlength' => 128,
+        'title_value' => '',
+        'url' => 0,
+      ),
+      'translatable' => '0',
+      'type' => 'link_field',
+    ),
+    'field_instance' => array(
+      'bundle' => 'distributors',
+      'default_value' => NULL,
+      'deleted' => '0',
+      'description' => 'Company website for the distributor',
+      'display' => array(
+        'default' => array(
+          'label' => 'above',
+          'module' => 'link',
+          'settings' => array(),
+          'type' => 'link_default',
+          'weight' => 11,
+        ),
+        'teaser' => array(
+          'label' => 'above',
+          'settings' => array(),
+          'type' => 'hidden',
+          'weight' => 0,
+        ),
+      ),
+      'entity_type' => 'node',
+      'field_name' => 'field_distributor_website',
+      'label' => 'Distributor Website',
+      'required' => 0,
+      'settings' => array(
+        'attributes' => array(
+          'class' => '',
+          'configurable_title' => 0,
+          'rel' => '',
+          'target' => '_blank',
+          'title' => '',
+        ),
+        'display' => array(
+          'url_cutoff' => '80',
+        ),
+        'enable_tokens' => 1,
+        'title' => 'none',
+        'title_maxlength' => '128',
+        'title_value' => '',
+        'url' => 0,
+        'user_register_form' => FALSE,
+        'validate_url' => 1,
+      ),
+      'widget' => array(
+        'active' => 0,
+        'module' => 'link',
+        'settings' => array(),
+        'type' => 'link_field',
+        'weight' => '5',
       ),
     ),
   );
 
   // Translatables
   // Included for use with string extractors like potx.
-  t('A short summary about the distributor');
-  t('City of the distributor\'s address');
-  t('Contact email address for the distributor.');
+  t('A short summary about the distributor\'s business and offerings');
+  t('Company website for the distributor');
+  t('Contact email address for the distributor');
   t('Contact phone number for the distributor');
   t('Distributor City');
   t('Distributor Email');
@@ -756,14 +838,13 @@ function distributors_page_field_default_fields() {
   t('Distributor State');
   t('Distributor Street1');
   t('Distributor Street2');
+  t('Distributor Website');
   t('Distributor Zip Code');
-  t('Logo for distributor');
+  t('Logo for the distributor, will be resized to 200px by 200px');
+  t('Name of the distributor');
   t('Street address of the distributor');
   t('The distributor\'s slogan');
-  t('The name of the distributor');
-  t('The state of the distributors address');
   t('Unit, apt, or suite number of the distributor');
-  t('Zip code of the distributor address');
 
   return $fields;
 }

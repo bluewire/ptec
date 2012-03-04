@@ -73,7 +73,7 @@ function testimonials_field_default_fields() {
           'size' => '60',
         ),
         'type' => 'text_textfield',
-        'weight' => '33',
+        'weight' => '1',
       ),
     ),
   );
@@ -155,7 +155,7 @@ function testimonials_field_default_fields() {
           'year_range' => '-3:+3',
         ),
         'type' => 'date_popup',
-        'weight' => '34',
+        'weight' => '2',
       ),
     ),
   );
@@ -221,7 +221,7 @@ function testimonials_field_default_fields() {
           'rows' => '5',
         ),
         'type' => 'text_textarea',
-        'weight' => '32',
+        'weight' => '3',
       ),
     ),
   );

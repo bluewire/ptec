@@ -22,7 +22,7 @@ function featured_slides_node_info() {
     'featured_slide' => array(
       'name' => t('Featured Slide'),
       'base' => 'node_content',
-      'description' => t('a slide with featured content for the home page'),
+      'description' => t('A slide with featured content for the home page'),
       'has_title' => '1',
       'title_label' => t('Title'),
       'help' => '',

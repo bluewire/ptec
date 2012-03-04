@@ -5,6 +5,16 @@
  */
 
 /**
+ * Implements hook_ctools_plugin_api().
+ */
+function distributors_page_ctools_plugin_api() {
+  list($module, $api) = func_get_args();
+  if ($module == "context" && $api == "context") {
+    return array("version" => "3");
+  }
+}
+
+/**
  * Implements hook_views_api().
  */
 function distributors_page_views_api() {
@@ -22,7 +32,7 @@ function distributors_page_node_info() {
     'distributors' => array(
       'name' => t('Distributor'),
       'base' => 'node_content',
-      'description' => t('distributor information such as a company logo and a brief description'),
+      'description' => t('Distributor information such as a company logo and a brief description'),
       'has_title' => '1',
       'title_label' => t('Title'),
       'help' => '',

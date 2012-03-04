@@ -71,7 +71,7 @@ function product_categories_field_default_fields() {
           'rows' => '5',
         ),
         'type' => 'text_textarea',
-        'weight' => '31',
+        'weight' => '3',
       ),
     ),
   );
@@ -149,7 +149,7 @@ function product_categories_field_default_fields() {
           'progress_indicator' => 'throbber',
         ),
         'type' => 'image_image',
-        'weight' => '32',
+        'weight' => '1',
       ),
     ),
   );
@@ -217,7 +217,7 @@ function product_categories_field_default_fields() {
           'size' => '60',
         ),
         'type' => 'text_textfield',
-        'weight' => '33',
+        'weight' => '2',
       ),
     ),
   );

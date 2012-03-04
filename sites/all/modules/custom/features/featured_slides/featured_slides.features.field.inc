@@ -71,7 +71,7 @@ function featured_slides_field_default_fields() {
           'rows' => '5',
         ),
         'type' => 'text_textarea',
-        'weight' => '37',
+        'weight' => '2',
       ),
     ),
   );
@@ -108,7 +108,7 @@ function featured_slides_field_default_fields() {
     'field_instance' => array(
       'bundle' => 'featured_slide',
       'deleted' => '0',
-      'description' => 'the background image on the featured slide',
+      'description' => 'the image for the featured slide, all images should be about 400px tall, full images should be 950px wide and half images should be 450px wide',
       'display' => array(
         'default' => array(
           'label' => 'above',
@@ -149,7 +149,7 @@ function featured_slides_field_default_fields() {
           'progress_indicator' => 'throbber',
         ),
         'type' => 'image_image',
-        'weight' => '38',
+        'weight' => '3',
       ),
     ),
   );
@@ -213,7 +213,7 @@ function featured_slides_field_default_fields() {
         'module' => 'options',
         'settings' => array(),
         'type' => 'options_select',
-        'weight' => '36',
+        'weight' => '1',
       ),
     ),
   );
@@ -285,7 +285,7 @@ function featured_slides_field_default_fields() {
         'module' => 'options',
         'settings' => array(),
         'type' => 'options_select',
-        'weight' => '39',
+        'weight' => '4',
       ),
     ),
   );
@@ -298,7 +298,7 @@ function featured_slides_field_default_fields() {
   t('Link');
   t('select how this slide should be displayed');
   t('short text description on the slide');
-  t('the background image on the featured slide');
+  t('the image for the featured slide, all images should be about 400px tall, full images should be 950px wide and half images should be 450px wide');
   t('the page that the featured slide should link to when clicked');
 
   return $fields;

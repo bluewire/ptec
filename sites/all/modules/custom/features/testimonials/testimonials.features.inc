@@ -22,7 +22,7 @@ function testimonials_node_info() {
     'testimonial' => array(
       'name' => t('Testimonial'),
       'base' => 'node_content',
-      'description' => t('a short quote from a satisfied customer'),
+      'description' => t('A short quote from a satisfied customer'),
       'has_title' => '1',
       'title_label' => t('Title'),
       'help' => '',

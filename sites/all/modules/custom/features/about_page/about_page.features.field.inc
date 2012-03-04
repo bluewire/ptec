@@ -40,7 +40,7 @@ function about_page_field_default_fields() {
       'bundle' => 'employee',
       'default_value' => NULL,
       'deleted' => '0',
-      'description' => '',
+      'description' => 'A brief bio about the employee',
       'display' => array(
         'default' => array(
           'label' => 'hidden',
@@ -95,7 +95,7 @@ function about_page_field_default_fields() {
       'bundle' => 'employee',
       'default_value' => NULL,
       'deleted' => '0',
-      'description' => 'Contact email address for the employee.',
+      'description' => '',
       'display' => array(
         'default' => array(
           'label' => 'hidden',
@@ -125,7 +125,7 @@ function about_page_field_default_fields() {
           'size' => '60',
         ),
         'type' => 'email_textfield',
-        'weight' => '8',
+        'weight' => '4',
       ),
     ),
   );
@@ -184,7 +184,7 @@ function about_page_field_default_fields() {
         'module' => 'phone',
         'settings' => array(),
         'type' => 'phone_textfield',
-        'weight' => '7',
+        'weight' => '3',
       ),
     ),
   );
@@ -252,7 +252,7 @@ function about_page_field_default_fields() {
           'size' => '50',
         ),
         'type' => 'text_textfield',
-        'weight' => '4',
+        'weight' => '1',
       ),
     ),
   );
@@ -289,7 +289,7 @@ function about_page_field_default_fields() {
     'field_instance' => array(
       'bundle' => 'employee',
       'deleted' => '0',
-      'description' => '',
+      'description' => 'picture of the employee, will be resized to 200px by 200px',
       'display' => array(
         'default' => array(
           'label' => 'hidden',
@@ -311,15 +311,15 @@ function about_page_field_default_fields() {
       'entity_type' => 'node',
       'field_name' => 'field_profile_picture',
       'label' => 'Employee Profile Picture',
-      'required' => 1,
+      'required' => 0,
       'settings' => array(
         'alt_field' => 1,
         'file_directory' => '',
         'file_extensions' => 'png gif jpg jpeg',
         'max_filesize' => '512',
-        'max_resolution' => '200x200',
-        'min_resolution' => '100x100',
-        'title_field' => 0,
+        'max_resolution' => '',
+        'min_resolution' => '200x200',
+        'title_field' => 1,
         'user_register_form' => FALSE,
       ),
       'widget' => array(
@@ -330,7 +330,7 @@ function about_page_field_default_fields() {
           'progress_indicator' => 'throbber',
         ),
         'type' => 'image_image',
-        'weight' => '3',
+        'weight' => '5',
       ),
     ),
   );
@@ -398,20 +398,21 @@ function about_page_field_default_fields() {
           'size' => '30',
         ),
         'type' => 'text_textfield',
-        'weight' => '5',
+        'weight' => '2',
       ),
     ),
   );
 
   // Translatables
   // Included for use with string extractors like potx.
-  t('Contact email address for the employee.');
+  t('A brief bio about the employee');
   t('Employee Description');
   t('Employee Email');
   t('Employee Name');
   t('Employee Phone');
   t('Employee Profile Picture');
   t('Employee Title');
+  t('picture of the employee, will be resized to 200px by 200px');
 
   return $fields;
 }
